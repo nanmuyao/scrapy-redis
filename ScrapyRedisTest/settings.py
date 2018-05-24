@@ -39,7 +39,7 @@ DUPEFILTER_CLASS = "scrapy_redis.dupefilter.RFPDupeFilter"
 
 ITEM_PIPELINES = {
     'scrapy_redis.pipelines.RedisPipeline': 300,
-    'ScrapyRedisTest.pipelines.MysqlTwistedPipline': 300
+    # 'ScrapyRedisTest.pipelines.MysqlTwistedPipline': 301
 }
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
@@ -118,6 +118,3 @@ MYSQL_PASSWORD = "kbe"
 
 SQL_DATETIME_FORMAT = "%Y-%m-%d %H:%M:%S"
 SQL_DATE_FORMAT = "%Y-%m-%d"
-
-
-AAAA
