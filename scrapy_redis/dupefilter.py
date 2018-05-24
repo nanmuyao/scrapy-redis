@@ -6,7 +6,7 @@ from scrapy.utils.request import request_fingerprint
 
 from . import defaults
 from .connection import get_redis_from_settings
-
+from ScrapyRedisTest.utils.bloomfilter import conn, PyBloomFilter
 
 logger = logging.getLogger(__name__)
 
@@ -38,6 +38,7 @@ class RFPDupeFilter(BaseDupeFilter):
         self.key = key
         self.debug = debug
         self.logdupes = True
+        self.bf = PyBloomFilter(conn=conn, key=key)
 
     @classmethod
     def from_settings(cls, settings):
@@ -96,6 +97,12 @@ class RFPDupeFilter(BaseDupeFilter):
 
         """
         fp = self.request_fingerprint(request)
+
+        if self.bf.is_exist(fp):
+            return True;
+        else:
+            self.bf.add(fp)
+            return False
         # This returns the number of values added, zero if already exists.
         added = self.server.sadd(self.key, fp)
         return added == 0
@@ -113,6 +120,15 @@ class RFPDupeFilter(BaseDupeFilter):
 
         """
         return request_fingerprint(request)
+
+    @classmethod
+    def from_spider(cls, spider):
+        settings = spider.settings
+        server = get_redis_from_settings(settings)
+        dupefilter_key = settings.get("SCHEDULER_DUPEFILTER_KEY", defaults.SCHEDULER_DUPEFILTER_KEY)
+        key = dupefilter_key % {'spider': spider.name}
+        debug = settings.getbool('DUPEFILTER_DEBUG')
+        return cls(server, key=key, debug=debug)
 
     def close(self, reason=''):
         """Delete data on close. Called by Scrapy's scheduler.
