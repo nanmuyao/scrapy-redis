@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/ScrapyRedisTest.iml" filepath="$PROJECT_DIR$/.idea/ScrapyRedisTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/ScrapyRedisTest.iml" filepath="$PROJECT_DIR$/.idea/ScrapyRedisTest.iml" />
     </modules>
   </component>
 </project>

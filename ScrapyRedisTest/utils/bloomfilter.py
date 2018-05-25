@@ -57,7 +57,7 @@ class PyBloomFilter():
         return hashs
 
 
-pool = redis.ConnectionPool(host='127.0.0.1', port=6379, db=0)
+pool = redis.ConnectionPool(host='192.168.0.113', port=6379, db=0)
 conn = redis.StrictRedis(connection_pool=pool)
 
 start = time.time()

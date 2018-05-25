@@ -1,0 +1,8 @@
+
+*.xml
+*.xml
+.idea/modules.xml
+.idea/ScrapyRedisTest.iml
+.idea/workspace.xml
+.idea/modules.xml
+ScrapyRedisTest/spiders/articleexport.json

@@ -8,6 +8,8 @@
 import MySQLdb
 import MySQLdb.cursors
 from twisted.enterprise import adbapi
+from scrapy.pipelines.images import ImagesPipeline
+from scrapy.exporters import JsonItemExporter
 
 
 class ScrapyredistestPipeline(object):
@@ -49,3 +51,34 @@ class MysqlTwistedPipline(object):
         insert_sql, params = item.get_insert_sql()
         print(insert_sql, params)
         cursor.execute(insert_sql, params)
+
+
+class ArticleImagePipeline(ImagesPipeline):
+
+    def item_completed(self, results, item, info):
+        if "front_image_url" in item:
+            for ok, value in results:
+                if ok:
+                    image_file_path = value["path"]
+                else:
+                    image_file_path = "no img"
+                item["front_image_path"] = image_file_path
+
+        return item
+
+
+class JsonExporterPipleline(object):
+    #调用scrapy提供的json export导出json文件
+    def __init__(self):
+        self.file = open('articleexport.json', 'wb')
+        self.exporter = JsonItemExporter(self.file, encoding="utf-8", ensure_ascii=False)
+        self.exporter.start_exporting()
+
+    def close_spider(self, spider):
+        self.exporter.finish_exporting()
+        self.file.close()
+
+    def process_item(self, item, spider):
+        self.exporter.export_item(item)
+        return item
+

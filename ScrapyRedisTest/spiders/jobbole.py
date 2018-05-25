@@ -23,7 +23,7 @@ class MySpider(RedisSpider):
 
     custom_settings = {
         # 指定redis数据库的连接参数
-        'REDIS_HOST': '192.168.0.148',
+        'REDIS_HOST': '192.168.0.113',
         'REDIS_PORT': 6379,
     }
 

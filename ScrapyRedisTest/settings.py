@@ -38,8 +38,9 @@ DUPEFILTER_CLASS = "scrapy_redis.dupefilter.RFPDupeFilter"
 # }
 
 ITEM_PIPELINES = {
-    'scrapy_redis.pipelines.RedisPipeline': 300,
-    # 'ScrapyRedisTest.pipelines.MysqlTwistedPipline': 301
+    # 'scrapy_redis.pipelines.RedisPipeline': 300,
+    'ScrapyRedisTest.pipelines.MysqlTwistedPipline': 10,
+    'ScrapyRedisTest.pipelines.ArticleImagePipeline': 2,
 }
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
@@ -48,7 +49,7 @@ ITEM_PIPELINES = {
 # Configure a delay for requests for the same website (default: 0)
 # See https://doc.scrapy.org/en/latest/topics/settings.html#download-delay
 # See also autothrottle settings and docs
-#DOWNLOAD_DELAY = 3
+DOWNLOAD_DELAY = 3
 # The download delay setting will honor only one of:
 #CONCURRENT_REQUESTS_PER_DOMAIN = 16
 #CONCURRENT_REQUESTS_PER_IP = 16
@@ -118,3 +119,7 @@ MYSQL_PASSWORD = "kbe"
 
 SQL_DATETIME_FORMAT = "%Y-%m-%d %H:%M:%S"
 SQL_DATE_FORMAT = "%Y-%m-%d"
+
+IMAGES_URLS_FIELD = "front_image_url"
+project_dir = os.path.abspath(os.path.dirname(__file__))
+IMAGES_STORE = os.path.join(project_dir, 'images')
