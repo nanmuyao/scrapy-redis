@@ -19,3 +19,4 @@ mysql数据库截图存储数据的时候把数据库中的content字段添加�
 
 ![image](https://github.com/nanmuyao/netbean/tree/master/spiderData/mysql.png)
 
+ <img src="https://github.com/nanmuyao/netbean/tree/master/spiderData/mysql.png" width = "300" height = "200" alt="mysql" align=center />
