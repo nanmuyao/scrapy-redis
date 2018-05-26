@@ -22,6 +22,6 @@ mysql数据库截图存储数据的时候把数据库中的content字段添加�
 
 ![image](https://github.com/nanmuyao/netbean/blob/master/spiders/netBeanMusic.png)
 
-  
-![image](https://github.com/nanmuyao/scrapy-redis/tree/master/ScrapyRedisTest/images/win.png)
+
+![image](https://github.com/nanmuyao/scrapy-redis/tree/master/ScrapyRedisTest/images/netBeanMusic.png)
 
