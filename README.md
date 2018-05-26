@@ -7,6 +7,8 @@ scrapy-redis distributedJobbole 分布式的结构抓取伯乐在线的数据
 
 3，[scrapy-redis环境搭建](https://github.com/rmax/scrapy-redis)
 
+3，[如果一下关于项目的截图不能查看请点击此链接进行查看](https://blog.csdn.net/han1558249222/article/details/80465383)
+
 win机器抓取截图：
 
 ![image](https://github.com/nanmuyao/netbean/tree/master/spiderData/win.png)
@@ -19,5 +21,3 @@ mysql数据库截图存储数据的时候把数据库中的content字段添加�
 
 ![image](https://github.com/nanmuyao/netbean/tree/master/spiderData/mysql.png)
 
-
-![Image text](https://raw.github.com/yourName/repositpry/master/yourprojectName/img-folder/test.jpg)
