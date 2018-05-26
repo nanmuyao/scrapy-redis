@@ -60,7 +60,8 @@ class MySpider(RedisSpider):
         item_loader.add_css("comment_nums", "a[href='#article-comment'] span::text")
         item_loader.add_css("fav_nums", ".bookmark-btn::text")
         item_loader.add_css("tags", "p.entry-meta-hide-on-mobile a::text")
-        item_loader.add_css("content", "div.entry")
+        # item_loader.add_css("content", "div.entry")
+        item_loader.add_value("content", "content mac")
         article_item = item_loader.load_item()
         yield article_item
 
