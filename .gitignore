@@ -6,3 +6,4 @@
 .idea/workspace.xml
 .idea/modules.xml
 ScrapyRedisTest/spiders/articleexport.json
+*.jpg
