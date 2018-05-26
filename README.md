@@ -9,19 +9,13 @@ scrapy-redis distributedJobbole 分布式的结构抓取伯乐在线的数据
 
 win机器抓取截图：
 
-![image](https://github.com/nanmuyao/scrapy-redis/tree/master/ScrapyRedisTest/images/win.png)
+![image](https://github.com/nanmuyao/netbean/tree/master/spiderData/win.png)
 
 mac机器抓取截图：
 
-![image](https://github.com/nanmuyao/scrapy-redis/tree/master/ScrapyRedisTest/images/mac.png)
+![image](https://github.com/nanmuyao/netbean/tree/master/spiderData/mac.png)
 
 mysql数据库截图存储数据的时候把数据库中的content字段添加特别是指，win机器抓取的存储为win，mac机器抓取存储为mac：
 
-![image](https://github.com/nanmuyao/scrapy-redis/tree/master/ScrapyRedisTest/images/mysql.png)
-
-
-![image](https://github.com/nanmuyao/netbean/blob/master/spiders/netBeanMusic.png)
-
-
-![image](https://github.com/nanmuyao/scrapy-redis/tree/master/ScrapyRedisTest/images/netBeanMusic.png)
+![image](https://github.com/nanmuyao/netbean/tree/master/spiderData/mysql.png)
 
