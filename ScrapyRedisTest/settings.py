@@ -112,7 +112,7 @@ DOWNLOAD_DELAY = 1
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
 
 
-MYSQL_HOST = "127.0.0.1"
+MYSQL_HOST = "192.168.0.149"
 MYSQL_DBNAME = "article_spider"
 MYSQL_USER = "kbe"
 MYSQL_PASSWORD = "kbe"
