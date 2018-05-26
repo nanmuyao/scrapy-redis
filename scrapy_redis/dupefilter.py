@@ -98,11 +98,12 @@ class RFPDupeFilter(BaseDupeFilter):
         """
         fp = self.request_fingerprint(request)
 
-        if self.bf.is_exist(fp):
-            return True;
-        else:
-            self.bf.add(fp)
-            return False
+        #这里占用内存过大所以使用过大所以采用scrapy-redis自己的过滤机制吧
+        # if self.bf.is_exist(fp):
+        #     return True;
+        # else:
+        #     self.bf.add(fp)
+        #     return False
         # This returns the number of values added, zero if already exists.
         added = self.server.sadd(self.key, fp)
         return added == 0
