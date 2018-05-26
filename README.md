@@ -18,5 +18,3 @@ mac机器抓取截图：
 mysql数据库截图存储数据的时候把数据库中的content字段添加特别是指，win机器抓取的存储为win，mac机器抓取存储为mac：
 
 ![image](https://github.com/nanmuyao/netbean/tree/master/spiderData/mysql.png)
-
-![image](https://github.com/nanmuyao/scrapy-redis/tree/master/ScrapyRedisTest/images/win3.png)
