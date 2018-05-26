@@ -7,7 +7,7 @@ scrapy-redis distributedJobbole 分布式的结构抓取伯乐在线的数据
 
 3，[scrapy-redis环境搭建](https://github.com/rmax/scrapy-redis)
 
-3，[如果一下关于项目的截图不能查看请点击此链接进行查看](https://blog.csdn.net/han1558249222/article/details/80465383)
+3，[如果以下关于项目的截图不能查看请点击此链接进行查看](https://blog.csdn.net/han1558249222/article/details/80465383)
 
 win机器抓取截图：
 
